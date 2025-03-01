@@ -26,7 +26,7 @@ import { CiGlobe } from "react-icons/ci";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { FaRegFileLines } from "react-icons/fa6";
-import { MdLockOutline, MdOutlineMinimize } from "react-icons/md";
+import { MdLockOutline } from "react-icons/md";
 import { Badge } from "@/components/ui/badge";
 import { TiMinus, TiPlus } from "react-icons/ti";
 import React, { useRef } from "react";
@@ -990,12 +990,6 @@ const AskQuestion = ({
     </AnimatePresence>
   );
 };
-
-const cairo = Cairo({
-  variable: "--font-cairo-sans",
-  subsets: ["latin", "arabic"],
-  weight: ["400", "700"],
-});
 
 const Leaderboard = ({
   isOpen,
