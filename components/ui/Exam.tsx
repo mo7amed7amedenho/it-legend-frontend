@@ -47,7 +47,7 @@ const QuestionModal = ({
               onClick={onClose}
               className="absolute top-4 hover:scale-105 cursor-pointer left-4 text-gray-600 hover:text-gray-800 transition"
             >
-              <IoMdClose  size={24} />
+              <IoMdClose size={24} />
             </button>
 
             {/* العداد الزمني */}
@@ -75,7 +75,8 @@ const QuestionModal = ({
 
             {/* السؤال */}
             <h2 className="text-lg font-semibold text-gray-800 mb-4">
-              1.Which one is the Framework to make a Mobile App Native platform?
+              Which framework is used to develop mobile apps for native
+              platforms?
             </h2>
 
             {/* الخيارات */}
