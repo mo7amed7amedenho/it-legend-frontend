@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lexend, Lexend_Mega } from "next/font/google";
+import { Cairo } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
+const cairo = Cairo({
+  subsets: ["latin", "arabic"],
+  weight: ["400", "700"],
+  variable: "--font-cairo",
+});
+
+const lexendSans = Lexend({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const lexendMono = Lexend_Mega({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -25,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${cairo.variable} ${lexendSans.variable} ${lexendMono.variable} antialiased`}
       >
         {children}
       </body>
