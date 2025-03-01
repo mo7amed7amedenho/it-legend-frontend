@@ -31,6 +31,7 @@ import { Badge } from "@/components/ui/badge";
 import { TiMinus, TiPlus } from "react-icons/ti";
 import React, { useRef } from "react";
 import PdfModal from "@/components/ui/Pdf";
+import { Switch } from "@/components/ui/switch";
 
 export default function Home() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -41,9 +42,22 @@ export default function Home() {
   const [isPdfOpen, setIsPdfOpen] = React.useState(false);
   const [isAsk, setisAsk] = React.useState(false);
   const [isLeader, setisLeader] = React.useState(false);
+  const [isChecked, setIsChecked] = useState(false);
   const scrollToSection = () => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+  const handleSwitchChange = (checked: boolean) => {
+    setIsChecked(checked);
+
+    if (checked) {
+      console.log("السويتش مفتوح ✅");
+      // ضع هنا الكود الذي تريده عند تفعيل السويتش
+    } else {
+      console.log("السويتش مغلق ❌");
+      // ضع هنا الكود الذي تريده عند إغلاق السويتش
+    }
+  };
+
   return (
     <main className="p-4 md:p-6 bg-gray-100 min-h-screen">
       <div className="absolute flex items-center justify-center w-full top-0  left-0 capitalize bg-emerald-600">
@@ -61,6 +75,16 @@ export default function Home() {
           >
             PDF
           </p>
+          <div className="flex items-center space-x-2">
+            <Switch
+              checked={isChecked}
+              onCheckedChange={handleSwitchChange}
+              className="bg-gray-50 text-emerald-600"
+            />
+            <span className="text-white">
+              {isChecked ? "Sticky: On" : "Sticky: Off"}
+            </span>
+          </div>
         </div>
         <>
           {/* المودال */}
@@ -121,7 +145,11 @@ export default function Home() {
         {/* Main Content Section */}
         <div className="lg:col-span-2 space-y-6">
           {/* Video Player */}
-          <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden shadow-lg max-sm:sticky max-sm:top-0">
+          <div
+            className={`aspect-video bg-gray-200 rounded-xl overflow-hidden shadow-lg ${
+              isChecked ? "max-sm:sticky max-sm:top-0" : ""
+            } `}
+          >
             <ReactPlayer
               url="https://www.youtube.com/watch?v=P0uaLRO6V1U"
               controls
