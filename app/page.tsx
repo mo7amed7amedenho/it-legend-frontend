@@ -31,7 +31,6 @@ import { Badge } from "@/components/ui/badge";
 import { TiMinus, TiPlus } from "react-icons/ti";
 import React, { useRef } from "react";
 import PdfModal from "@/components/ui/Pdf";
-import { Cairo } from "next/font/google";
 
 export default function Home() {
   const sectionRef = useRef<HTMLDivElement>(null);
