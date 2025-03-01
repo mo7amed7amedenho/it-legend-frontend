@@ -590,6 +590,7 @@ export default function Home() {
                   alt="avatar"
                   width={60}
                   height={60}
+                  loading="lazy"
                   className="rounded-full w-12 h-12 md:w-14 md:h-14"
                 />
                 <div className="flex-1">
@@ -613,6 +614,7 @@ export default function Home() {
                   alt="avatar"
                   width={60}
                   height={60}
+                  loading="lazy"
                   className="rounded-full w-12 h-12 md:w-14 md:h-14"
                 />
                 <div className="flex-1">
@@ -636,6 +638,7 @@ export default function Home() {
                   alt="avatar"
                   width={60}
                   height={60}
+                  loading="lazy"
                   className="rounded-full w-12 h-12 md:w-14 md:h-14"
                 />
                 <div className="flex-1">
