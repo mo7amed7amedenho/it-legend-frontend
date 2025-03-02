@@ -43,9 +43,7 @@ export default function Home() {
   const [isAsk, setisAsk] = React.useState(false);
   const [isLeader, setisLeader] = React.useState(false);
   const [isChecked, setIsChecked] = useState(false);
-  const scrollToSection = () => {
-    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  
   const handleSwitchChange = (checked: boolean) => {
     setIsChecked(checked);
 
@@ -112,89 +110,7 @@ export default function Home() {
           </div>
 
           {/* Course Material */}
-          <section className="space-y-6">
-            <h3 className="text-xl md:text-2xl font-semibold">
-              Course Material
-            </h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Card 1 */}
-              <div className="bg-white p-4 rounded-xl shadow-md border border-gray-200">
-                <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                  <div className="flex items-center gap-2">
-                    <LuClock3 className="text-gray-600 text-lg" />
-                    <span className="text-sm text-gray-600">Duration:</span>
-                  </div>
-                  <span className="text-sm text-gray-800 font-medium">
-                    3 weeks
-                  </span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                  <div className="flex items-center gap-2">
-                    <LuLibrary className="text-gray-600 text-lg" />
-                    <span className="text-sm text-gray-600">Lessons:</span>
-                  </div>
-                  <span className="text-sm text-gray-800 font-medium">8</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                  <div className="flex items-center gap-2">
-                    <FaUserGraduate className="text-gray-600 text-lg" />
-                    <span className="text-sm text-gray-600">Enrolled:</span>
-                  </div>
-                  <span className="text-sm text-gray-800 font-medium">
-                    65 students
-                  </span>
-                </div>
-                <div className="flex justify-between items-center pt-3">
-                  <div className="flex items-center gap-2">
-                    <CiGlobe className="text-gray-600 text-xl" />
-                    <span className="text-sm text-gray-600">Language:</span>
-                  </div>
-                  <span className="text-sm text-gray-800 font-medium">
-                    English
-                  </span>
-                </div>
-              </div>
-
-              {/* Card 2 */}
-              <div className="bg-white p-4 rounded-xl shadow-md border border-gray-200 max-sm:hidden">
-                <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                  <div className="flex items-center gap-2">
-                    <LuClock3 className="text-gray-600 text-lg" />
-                    <span className="text-sm text-gray-600">Duration:</span>
-                  </div>
-                  <span className="text-sm text-gray-800 font-medium">
-                    3 weeks
-                  </span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                  <div className="flex items-center gap-2">
-                    <LuLibrary className="text-gray-600 text-lg" />
-                    <span className="text-sm text-gray-600">Lessons:</span>
-                  </div>
-                  <span className="text-sm text-gray-800 font-medium">8</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                  <div className="flex items-center gap-2">
-                    <FaUserGraduate className="text-gray-600 text-lg" />
-                    <span className="text-sm text-gray-600">Enrolled:</span>
-                  </div>
-                  <span className="text-sm text-gray-800 font-medium">
-                    65 students
-                  </span>
-                </div>
-                <div className="flex justify-between items-center pt-3">
-                  <div className="flex items-center gap-2">
-                    <CiGlobe className="text-gray-600 text-xl" />
-                    <span className="text-sm text-gray-600">Language:</span>
-                  </div>
-                  <span className="text-sm text-gray-800 font-medium">
-                    English
-                  </span>
-                </div>
-              </div>
-            </div>
-          </section>
+          
           <section>
             <h3 className="text-xl md:text-2xl font-semibold">
               Topics for this course
@@ -507,95 +423,8 @@ export default function Home() {
             </div>
           </section>
           {/* Comments Section */}
-          <section className="space-y-6" ref={sectionRef}>
-            <h3 className="text-xl md:text-2xl font-semibold">Comments</h3>
-
-            {/* Comment 1 */}
-            <div className="bg-white p-4 rounded-xl shadow-md border border-gray-200">
-              <div className="flex gap-4 items-start">
-                <Image
-                  src="/3.jpg"
-                  alt="avatar"
-                  width={60}
-                  height={60}
-                  loading="lazy"
-                  className="rounded-full w-12 h-12 md:w-14 md:h-14"
-                />
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h4 className="font-medium text-gray-800">Mohamed Hamed</h4>
-                    <span className="text-sm text-gray-500">Oct 10, 2025</span>
-                  </div>
-                  <p className="text-gray-600 text-sm md:text-base">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quas
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Comment 2 */}
-            <div className="bg-white p-4 rounded-xl shadow-md border border-gray-200">
-              <div className="flex gap-4 items-start">
-                <Image
-                  src="/1.jpg"
-                  alt="avatar"
-                  width={60}
-                  height={60}
-                  loading="lazy"
-                  className="rounded-full w-12 h-12 md:w-14 md:h-14"
-                />
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h4 className="font-medium text-gray-800">Ali Shahin</h4>
-                    <span className="text-sm text-gray-500">Oct 10, 2025</span>
-                  </div>
-                  <p className="text-gray-600 text-sm md:text-base">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quas
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Comment 3 */}
-            <div className="bg-white p-4 rounded-xl shadow-md border border-gray-200">
-              <div className="flex gap-4 items-start">
-                <Image
-                  src="/2.jpg"
-                  alt="avatar"
-                  width={60}
-                  height={60}
-                  loading="lazy"
-                  className="rounded-full w-12 h-12 md:w-14 md:h-14"
-                />
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h4 className="font-medium text-gray-800">Osama Elzero</h4>
-                    <span className="text-sm text-gray-500">Oct 10, 2025</span>
-                  </div>
-                  <p className="text-gray-600 text-sm md:text-base">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quas
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Comment Form */}
-            <div className="space-y-4">
-              <Textarea
-                placeholder="Write a comment..."
-                className="w-full border-gray-300 h-32 rounded-xl focus:ring-2 focus:ring-emerald-500"
-              />
-              <Button className="bg-emerald-500 cursor-pointer hover:bg-emerald-600 text-white px-8 py-6 rounded-xl gap-2 w-full md:w-auto">
-                Submit Review
-                <FaArrowRight className="text-sm" />
-              </Button>
-            </div>
-          </section>
-        </div>
-
+          <section>
+            
         {/* Sidebar Section */}
         <div className="lg:col-span-1 space-y-6 max-sm:hidden">
           <div className="bg-white p-4 rounded-xl shadow-md border border-gray-200">

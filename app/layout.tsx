@@ -1,8 +1,9 @@
+"use client";
 import type { Metadata } from "next";
 import { Lexend, Lexend_Mega } from "next/font/google";
 import { Cairo } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeProvider } from "../context/ThemeContext";
 
 const cairo = Cairo({
   subsets: ["latin", "arabic"],

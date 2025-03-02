@@ -1,5 +1,5 @@
 import * as Import from "../import";
-import { useTheme } from "@/app/context/ThemeContext";
+import { useTheme } from "@/context/ThemeContext";
 export default function Player() {
   const { isChecked } = useTheme();
   return (

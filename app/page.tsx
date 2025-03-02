@@ -1,6 +1,14 @@
 import * as Import from "@/components/import";
 
 export default function Home() {
+  const sectionRef = Import.React.useRef<HTMLDivElement>(null);
+  const [isAsk, setisAsk] = Import.React.useState(false);
+  const [isLeader, setisLeader] = Import.React.useState(false);
+
+  const scrollToSection = () => {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <main className="p-4 md:p-6 bg-gray-100 min-h-screen">
       <Import.Header />
@@ -33,7 +41,22 @@ export default function Home() {
             >
               <Import.FaTrophy className="text-lg md:text-xl" />
             </button>
+            {isAsk && (
+              <Import.AskQuestion
+                isOpen={isAsk}
+                onClose={() => setisAsk(false)}
+              />
+            )}
+            {isLeader && (
+              <Import.Leaderboard
+                isOpen={isLeader}
+                onClose={() => setisLeader(false)}
+              />
+            )}
           </div>
+          <Import.CourseMaterial />
+          <Import.CardMobile />
+          <section ref={sectionRef}></section>
         </div>
       </div>
     </main>

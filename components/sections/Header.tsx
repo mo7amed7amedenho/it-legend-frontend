@@ -1,4 +1,4 @@
-import { useTheme } from "@/app/context/ThemeContext";
+import { useTheme } from "@/context/ThemeContext";
 import * as Import from "@/components/import";
 export default function Header() {
   const {isChecked, setIsChecked} = useTheme();

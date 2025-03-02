@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, Trophy } from "lucide-react";
@@ -16,6 +17,7 @@ import Leaderboard from "./modals/Leaderboard";
 import Image from "next/image";
 import ReactPlayer from "react-player";
 import Exam from "@/components/modals/Exam";
+import CardMobile from "./sections/CardMobile";
 import {
   FaArrowRight,
   FaBookOpen,
@@ -36,6 +38,8 @@ import React, { useRef } from "react";
 import PdfModal from "@/components/modals/Pdf";
 import { Switch } from "@/components/ui/switch";
 import Player from "./sections/Player";
+import CourseMaterial from "./sections/CourseMaterial";
+import ProgressBar from "./ui/Progress";
 export {
   useState,
   useEffect,
@@ -73,8 +77,11 @@ export {
   React,
   useRef,
   Header,
+  CardMobile,
   BreadcrumbComponent,
   Leaderboard,
   AskQuestion,
   Player,
+  CourseMaterial,
+  ProgressBar,
 };
