@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lexend, Lexend_Mega } from "next/font/google";
 import { Cairo } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const cairo = Cairo({
   subsets: ["latin", "arabic"],
@@ -34,7 +35,7 @@ export default function RootLayout({
       <body
         className={`${cairo.variable} ${lexendSans.variable} ${lexendMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
