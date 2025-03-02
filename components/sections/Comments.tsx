@@ -1,52 +1,62 @@
 import * as Import from "../import";
+
 export default function Comments() {
   const Comments = [
     {
       id: 1,
       name: "Mohamed Hamed",
-      src: "/3.jpg",
+      src: "/images/3.jpg",
       date: "Oct 10, 2025",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas",
     },
     {
       id: 2,
       name: "Ali Sahien",
-      src: "/1.jpg",
+      src: "/images/1.jpg",
       date: "Oct 10, 2025",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas",
     },
     {
       id: 3,
       name: "Osama Elzero",
-      src: "/2.jpg",
+      src: "/images/2.jpg",
       date: "Oct 10, 2025",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas",
     },
   ];
+
   return (
     <div className="space-y-6">
       <h3 className="text-xl md:text-2xl font-semibold">Comments</h3>
 
-      <div className="bg-white p-4 rounded-xl shadow-md border border-gray-200">
-        <div className="flex gap-4 items-start">
-          <Import.Image
-            src="/3.jpg"
-            alt="avatar"
-            width={60}
-            height={60}
-            loading="lazy"
-            className="rounded-full w-12 h-12 md:w-14 md:h-14"
-          />
-          <div className="flex-1">
-            <div className="flex items-center gap-3 mb-2">
-              <h4 className="font-medium text-gray-800">Mohamed Hamed</h4>
-              <span className="text-sm text-gray-500">Oct 10, 2025</span>
+      {/* Comments List */}
+      <div className="space-y-4">
+        {Comments.map((comment) => (
+          <div
+            key={comment.id}
+            className="bg-gray-50 p-4 rounded-lg shadow-md border border-gray-200"
+          >
+            <div className="flex gap-4 items-start">
+              <Import.Image
+                src={comment.src}
+                alt="avatar"
+                width={60}
+                height={60}
+                loading="lazy"
+                className="rounded-full w-12 h-12 md:w-14 md:h-14"
+              />
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <h4 className="font-medium text-gray-800">{comment.name}</h4>
+                  <span className="text-sm text-gray-500">{comment.date}</span>
+                </div>
+                <p className="text-gray-600 text-sm md:text-base">
+                  {comment.text}
+                </p>
+              </div>
             </div>
-            <p className="text-gray-600 text-sm md:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-            </p>
           </div>
-        </div>
+        ))}
       </div>
 
       {/* Comment Form */}

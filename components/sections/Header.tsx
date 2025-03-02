@@ -12,10 +12,8 @@ export default function Header() {
 
     if (checked) {
       console.log("السويتش مفتوح ✅");
-      // ضع هنا الكود الذي تريده عند تفعيل السويتش
     } else {
       console.log("السويتش مغلق ❌");
-      // ضع هنا الكود الذي تريده عند إغلاق السويتش
     }
   };
 

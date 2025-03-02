@@ -5,7 +5,6 @@ export default function CourseMaterial() {
       <h3 className="text-xl md:text-2xl font-semibold">Course Material</h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Card 1 */}
         <div className="bg-white p-4 rounded-xl shadow-md border border-gray-200">
           <div className="flex justify-between items-center pb-3 border-b border-gray-200">
             <div className="flex items-center gap-2">
@@ -39,7 +38,6 @@ export default function CourseMaterial() {
           </div>
         </div>
 
-        {/* Card 2 */}
         <div className="bg-white p-4 rounded-xl shadow-md border border-gray-200 max-sm:hidden">
           <div className="flex justify-between items-center pb-3 border-b border-gray-200">
             <div className="flex items-center gap-2">

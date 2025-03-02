@@ -1,3 +1,4 @@
+"use client";
 import * as Import from "@/components/import";
 
 export default function Home() {
@@ -56,8 +57,11 @@ export default function Home() {
           </div>
           <Import.CourseMaterial />
           <Import.CardMobile />
-          <section ref={sectionRef}></section>
+          <section ref={sectionRef}>
+            <Import.Comments />
+          </section>
         </div>
+        <Import.CardDesktop />
       </div>
     </main>
   );

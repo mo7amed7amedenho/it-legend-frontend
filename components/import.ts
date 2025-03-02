@@ -40,6 +40,8 @@ import { Switch } from "@/components/ui/switch";
 import Player from "./sections/Player";
 import CourseMaterial from "./sections/CourseMaterial";
 import ProgressBar from "./ui/Progress";
+import Comments from "./sections/Comments";
+import CardDesktop from "./sections/CardDesktop";
 export {
   useState,
   useEffect,
@@ -84,4 +86,6 @@ export {
   Player,
   CourseMaterial,
   ProgressBar,
+  Comments,
+  CardDesktop,
 };
